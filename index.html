@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    
+   
+</head>
+<body>
+
+    <svg style="display: none;">
+        <symbol id="icon" viewBox="0 0 24 24">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+        </symbol>
+
+        <symbol id="bar" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <line x1="21" y1="10" x2="3" y2="10"/>
+            <line x1="21" y1="6" x2="3" y2="6"/>
+            <line x1="21" y1="14" x2="3" y2="14"/>
+            <line x1="21" y1="18" x2="3" y2="18"/>
+        </symbol>
+    </svg>
+
+    <div class="header">
+        <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li></li><div id="icon-container"></div>
+            <li><div id="bar-cont"></div></li>
+            
+        </ul>
+    </div>
+
+    <section class="first">
+
+        <img src="phone.jpg" class="imo" alt="phone" >
+        <a href="text.html">Java Script Lesson</a>
+
+        <div class="para">
+            <h1>NewGen Technologies!</h1>
+            <p>
+            Being conscious of your uniqness is what makes the difference! 
+            the real fake thing on earth is one who completely left who he is 
+            meant to be to become what another person is meant to be. 
+            Being conscious of your uniqness is what makes the difference! 
+                       
+            </p>
+        </div>
+
+    </section>
+    
+    <script>
+        async function FetchData (){
+            return('How are you doing?');
+        }
+        console.log(FetchData())
+
+        function IconShow(size = 46, color = 'black'){
+            return(`<svg width='${size}' height='${size}' fill='${color}'>
+                <use href='#icon'></use>
+                </svg>`
+                
+            );
+                      
+        }
+
+        document.getElementById('icon-container').innerHTML=IconShow( 30, 'red');
+
+        function displayIcon(size=40, color='green'){
+            return`<svg width='${size}' height='${size}' fill='${color}'>
+                    <use href = "#bar"></use>
+                </svg>`
+        }
+
+        document.getElementById('bar-cont').innerHTML=displayIcon(20, 'blue');
+
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+

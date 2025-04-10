@@ -1,0 +1,61 @@
+
+*{margin: 0; padding: 0;box-sizing: border-box;}
+
+body{text-align: center; width: 100vw; height: 100dvh; font-family: arial, sans-serif; display: flex; flex-direction: column; background-color: white;}
+
+body .header{width: 100%; height: 6em;  display: flex; justify-content: space-around; align-items: center; background-color: white;}
+
+.header ul{width: 100%; height: 70dvh; margin: 0 auto;  display: flex; font-size: min(1rem, 2vw, 1.8rem); justify-content: space-around; align-items: center; color: rgb(88, 0, 88); font-weight: bold;}
+
+ul li{list-style-type: none;}
+
+body .first{ width: 100%; height: 70dvh; margin: 0 auto; display: flex; align-items: center; justify-content: space-around; padding: clamp(12px, 4vw, 24px);}
+
+.first .para{ width: clamp(150px, 40vw, 25rem);  height: clamp(200px, 55vh, 500px); color: #333; padding: min(1.9rem, 6%);}
+
+.para h1 {font-size: clamp(10px, 1.7vw, 4rem); color: white; background-image: linear-gradient(to right, #ff00cc, rgb(88, 0, 88)); }
+
+.para p {font-size: clamp(6px, 1.5vw, 1.5rem); text-align: left; line-height: clamp(1.2rem, 4vw, 2.5rem);}
+
+.imo{ object-fit: cover;  aspect-ratio: 9/16; width: clamp(150px, 17vw, 25rem);  height: auto;  background-color: azure;}
+
+body .contana{width: 100%; height: 20%; background-color: rgba(245, 227, 245, 0.411); display: flex; align-items: center; justify-content: space-around;}
+
+.contana input { text-align: center; padding: 0.5rem; width: 30%; height: 25%; background-color: white;  outline: none; border: none; font-size: clamp(10px, 1vw, 1.5rem);
+  box-shadow: 0 0 5px lightgray;}
+
+.info{width: 20%; height: 10%; background-color: azure;}
+
+.contana button{ display: none; box-shadow: 0 0 5px lightgray; width: 30%; text-align: center; height: 10%; outline: none; border: none;background-color: white; font-size: clamp(10px, 1vw, 1.5rem)}
+
+.contana span { font-size: clamp(10.1px, 1vw, 1.5rem); padding: clamp(1rem, 4vw, 2rem); background-color: white; display: flex; align-items: center; justify-content: center; width: 30%; height: 25%; 
+  box-shadow: 0 0 5px lightgray;}
+.first a {animation: blink 2s infinite; background-clip: text; text-decoration: none; font-size: clamp(15px, 2vw, 3rem); 
+    background-image: linear-gradient(to right, magenta ,rgb(88, 0, 88)); text-shadow: 1px 1px 3px rgb(135, 135, 233);}
+a:hover{-webkit-text-fill-color: red;transition: all 3s ease-in-out;} 
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+.icon {
+    width: 42px;  /* Adjust size */
+    height: 42px;
+    fill: rgb(12, 8, 8);   /* Change color */
+    transition: fill 0.3s ease-in-out;
+  }
+  
+  
+  
+  
+
+
+  
+  
