@@ -45,13 +45,6 @@ a:hover{-webkit-text-fill-color: red;transition: all 3s ease-in-out;}
 
 
 
-.icon {
-    width: 42px;  /* Adjust size */
-    height: 42px;
-    fill: rgb(12, 8, 8);   /* Change color */
-    transition: fill 0.3s ease-in-out;
-  }
-  
   
   
   
