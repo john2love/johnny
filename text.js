@@ -30,6 +30,31 @@ if(score < 49 ){
     // SWITCH STATEMENT: This used to validate different possible fixed(check if the case value matches) options using a single referential value passed as an expression
     // so by this, different blocks of codes are executed based on the matched cases.
     // REAL WORLD CODE EXAMPLE: USER ROLE BASED ACCESS
+    
+    async function FetchData (){
+        return('How are you doing?');
+    }
+    console.log(FetchData())
+
+    function IconShow(size = 46, color = 'black'){
+        return(`<svg width='${size}' height='${size}' fill='${color}'>
+            <use href='#icon'></use>
+            </svg>`
+            
+        );
+                  
+    }
+
+    document.getElementById('icon-container').innerHTML = IconShow( 30, 'red');
+
+    function displayIcon(size=40, color='green'){
+        return`<svg width='${size}' height='${size}' fill='${color}'>
+                <use href = "#bar"></use>
+            </svg>`
+    }
+
+    document.getElementById('bar-cont').innerHTML = displayIcon(20, 'blue');
+
 
     let userSatus = document.getElementById('userSatus');
     let info = document.getElementById('info');

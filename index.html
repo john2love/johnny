@@ -55,32 +55,7 @@
 
     </section>
     
-    <script>
-        async function FetchData (){
-            return('How are you doing?');
-        }
-        console.log(FetchData())
-
-        function IconShow(size = 46, color = 'black'){
-            return(`<svg width='${size}' height='${size}' fill='${color}'>
-                <use href='#icon'></use>
-                </svg>`
-                
-            );
-                      
-        }
-
-        document.getElementById('icon-container').innerHTML = IconShow( 30, 'red');
-
-        function displayIcon(size=40, color='green'){
-            return`<svg width='${size}' height='${size}' fill='${color}'>
-                    <use href = "#bar"></use>
-                </svg>`
-        }
-
-        document.getElementById('bar-cont').innerHTML = displayIcon(20, 'blue');
-
-    </script>
+    <script src="text.js"></script>
 
 
 </body>
