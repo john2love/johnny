@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <div id="wrapper">
+        <form id="regForm">
+            <label>Username</label>
+           
+            <input type="text" name="username" pattern="^[a-zA-Z0-9_]{3,16}$" required /><br>
+
+            <label>Email</label>
+            <input type="email" name="email" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{3,}$" required />
+            <br>
+
+            <label>Password</label>
+            <input 
+            title="Password must be at least 8 characters, including 1 uppercase, 1 lowercase, 1 number, and 1 special character."
+            type="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required 
+            /><br>
+            <button type="submit">Register</button>
+        </form>
+        <output id="message"></output>
+
+        <div class="mother" style="margin-top: 200px;">
+            <label >Einter Number</label> <br>
+            <input type="text" name="num" id="num" required>
+            <div id="show" style=" width: 500px;  height: 2em;border: 1px solid gray;"></div>
+            <button type="button" id="btn">check</button>
+        </div>
+
+    </div>
+    
+    <script src="form.js"></script>
+</body>
+</html>
