@@ -22,15 +22,12 @@ button.addEventListener("click", () => {
 
 
 
-// function isEven(n){
-//    return +n % 2 === 0? `${n} "is and even`:  `${n} is odd`
-// }
-// console.log(isEven(8));
 
-let message = document.getElementById('message');
+
 
 document.getElementById('regForm').addEventListener('submit', async function(e) {
-    e.preventDefault(); // Prevent full page reload
+  e.preventDefault(); // Prevent full page reload
+  let message = document.getElementById('message');
 
     const formData = {
         username: e.target.username.value,

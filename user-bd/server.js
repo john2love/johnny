@@ -6,18 +6,34 @@ const cors = require('cors');
 // 2. Create an express app
 const app = express();
 //defined cors accessibility
-const corsOption = {
-    origin: 'http://localhost:3000',
+// const corsOption = {
+//     origin: '*',
 
-    methods: ['GET', 'POST'],
-    Credentials: true
-}
+//     methods: ['GET', 'POST'],
+//     Credentials: true
+// }
+
+const allowedOrigins = [
+    'http://localhost:3000', // for dev
+    'http://127.0.0.1:5500'
+  ];
+  
+  const corsOptions = {
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+  };
+  
+  
 // 3. Use express.json() middleware to parse JSON body
-app.use([
-    cors(corsOption),
-    express.json()
-]);
-app.use(express.json());
+app.use([cors(corsOptions), express.json()]);
+
 
 // 4. Create a placeholder array to store registered users
 const users = [];
