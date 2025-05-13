@@ -55,3 +55,7 @@ if(score < 49 ){
 
     document.getElementById('bar-cont').innerHTML = displayIcon(20, 'blue');
 
+    let handle = document.getElementById('clickin');
+    handle.onclick = ()=>{
+        globalThis.location = "form.html";
+    }
