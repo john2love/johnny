@@ -27,9 +27,6 @@ if(score < 49 ){
     // the last is else is true, it will skip the second condition to execute the last one, also if 
     // none of the else if inclution of the only if statements is true, it will skip all to the else statement.
 
-    // SWITCH STATEMENT: This used to validate different possible fixed(check if the case value matches) options using a single referential value passed as an expression
-    // so by this, different blocks of codes are executed based on the matched cases.
-    // REAL WORLD CODE EXAMPLE: USER ROLE BASED ACCESS
     
     async function FetchData (){
         return('How are you doing?');

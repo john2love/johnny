@@ -3,8 +3,7 @@ let userSatus = document.getElementById('userSatus');
 let info = document.getElementById('info');
 let btn = document.getElementById('click');
 
-// Hide the button initially
-btn.style.display = "none";
+
 
 // Show the button if input has content
 userSatus.addEventListener('input', () => {
@@ -19,10 +18,10 @@ userSatus.addEventListener('input', () => {
     }
 });
 
-
-// Also run it once on page load
-
-
+// SWITCH STATEMENT: This used to validate different possible fixed(check if the case value matches) options using a single referential value passed as an expression
+    // so by this, different blocks of codes are executed based on the matched cases.
+    // REAL WORLD CODE EXAMPLE: USER ROLE BASED ACCESS
+    
 btn.addEventListener('click', (e) => { 
     e.preventDefault();
 
@@ -47,6 +46,7 @@ btn.addEventListener('click', (e) => {
                     }
                     
                     info.textContent = message;
+          
                     userSatus.value = "";
                     
                    
@@ -56,6 +56,6 @@ btn.addEventListener('click', (e) => {
                     // Hide the button after 3second of click
                     setout = setTimeout(()=>{
                             btn.style.display = 'none';
-                        },3000)
+                        },1000)
                 });
                 
