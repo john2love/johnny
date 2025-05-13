@@ -1,0 +1,12 @@
+body .contana{width: 100%; height: 20%; background-color: rgba(245, 227, 245, 0.411); display: flex; align-items: center; justify-content: space-around;}
+
+.contana input { text-align: center; padding: 0.5rem; width: 30%; height: 25%; background-color: white;  outline: none; border: none; font-size: clamp(10px, 1vw, 1.5rem);
+  box-shadow: 0 0 5px lightgray;}
+
+  .contana button{ display: none; box-shadow: 0 0 5px lightgray; width: 30%; text-align: center; height: 10%; outline: none; border: none;background-color: white; font-size: clamp(10px, 1vw, 1.5rem)}
+
+.contana span { font-size: clamp(10.1px, 1vw, 1.5rem); padding: clamp(1rem, 4vw, 2rem); background-color: white; display: flex; align-items: center; justify-content: center; width: 30%; height: 25%; 
+  box-shadow: 0 0 5px lightgray;}
+
+  .info{width: 20%; height: 10%; background-color: azure;}
+
