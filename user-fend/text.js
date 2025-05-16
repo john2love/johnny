@@ -18,14 +18,13 @@ userSatus.addEventListener('input', () => {
     }
 });
 
-// SWITCH STATEMENT: This used to validate different possible fixed(check if the case value matches) options using a single referential value passed as an expression
+// SWITCH STATEMENT: This used to validate different possible fixed(check if the 
+// case value matches) options using a single referential value passed as an expression
     // so by this, different blocks of codes are executed based on the matched cases.
     // REAL WORLD CODE EXAMPLE: USER ROLE BASED ACCESS
     
 btn.addEventListener('click', (e) => { 
     e.preventDefault();
-
-    
     let statusValue = userSatus.value.trim(); // avoid overwriting the DOM element
     
     let message;
