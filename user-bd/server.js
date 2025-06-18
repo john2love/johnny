@@ -47,7 +47,8 @@ app.post('/register', (req, res) => {
     if (!username || !email || !password) {
         return res.status(400).json('All fields are required.');
     }
-    const userExists = users.find((user) => {user.email === email || user.username === username});
+    const userExists = users.find((user) => user.email === email || user.username === username);
+
 
     if (userExists) {
         return res.status(409).json('User already registered.');

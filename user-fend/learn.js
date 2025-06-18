@@ -1,8 +1,8 @@
 
 let global = " I am accessible by anyone";
 function hum(){
-    let attention = "Hey";
-    global = "I am only accissible by the function holding me";//this over shadow the global variable name global
+    let attention = "Hey i am accessable only in this function";
+    global = "i am a global variable so i can be accessed from anywere";//this over shadow the global variable name global
     console.log(attention, global);
 
 }
@@ -11,8 +11,8 @@ hum();
 
 let land = "small";
 function myLand (){
-    land = " Very big. "; //land variable accessed because it is global
-    let combine = ` I want ${land} land, `;
+    land = " i am land, a global guy "; //land variable accessed because it is global
+    let combine = `${land} (a value transfered from land) `;
     console.log(combine)
 }
 
@@ -20,8 +20,7 @@ console.log(land);// this log the global variable(land) to the console,
 // it will show first because it is called before the function(called outside the function)
 myLand(); // this call the function to action,log the conbine variable to the console.
 
-console.log(land);// called after the function (called inside the function). 
-// it log the local version of the land variable
+
 
 // PARAMETERS OF A FUNCTION: This is a variable assign to a function 
 // while declaring that function. It can be given a defaut value.
@@ -40,7 +39,7 @@ function perfectSqure(e = 9){
 perfectSqure();//default value of e is loged here
 perfectSqure(8);// the default value of e is bypassed and input value is loged, reuseable
 
-//RETURN STATEMENT, :it is used to a. return value from evaluation, b. also ussed to stop the 
+//RETURN STATEMENT, :it is used to a. return value from evaluation, b. also used to stop the 
 // function from execution, so mind were you place it in your function body, where there is 
 // no value to return, it only go with the the constant funtion of stopping the function.
 
@@ -62,3 +61,4 @@ function checkAge(age){
     return age > 18 ? true : "did your parent know about this?";
 }
 console.log(checkAge(9));
+

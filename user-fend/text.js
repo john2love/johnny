@@ -31,13 +31,13 @@ btn.addEventListener('click', (e) => {
     let setout;
     
     switch(statusValue){
-        case 'Admin':
+        case 'admin':
             message = 'Access granted! You can manage users and settings.';
             break;
-            case 'Staff':
+            case 'staff':
                 message = 'Access granted, you can edit content.';
                 break;
-                case 'Parent':
+                case 'parent':
                     message = 'Access granted, you can view content.';
                     break;
                     default:
@@ -58,3 +58,5 @@ btn.addEventListener('click', (e) => {
                         },1000)
                 });
                 
+               
+              

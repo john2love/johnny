@@ -1,33 +1,4 @@
 
-console.log("I love you");
-
-const show = document.getElementById('show');
-const button = document.getElementById('btn');
-const input = document.getElementById('num');
-
-let setout;
-const checkEvenOrOdd = (value) => {
-  const num = Number(value);
-  if (isNaN(num)) return 'Please enter a valid number';
-  return num % 2 === 0 ? `${num} is Even` : `${num} is Odd`;
-};
-
-button.addEventListener("click", () => {
-  const result = checkEvenOrOdd(input.value);
-  show.textContent = result;
-  
-  if(setout){
-    clearTimeout(setout);
-    
-  }
-  setout = setTimeout(() => {
-    document.getElementById('num').value = "";
-  }, 2000);
-});
-
-
-
-
 
 
 document.getElementById('regForm').addEventListener('submit', async function(e) {
@@ -41,6 +12,7 @@ document.getElementById('regForm').addEventListener('submit', async function(e) 
     };
 
     try {
+      let clearone;
         const sendAndResponse = await fetch('http://localhost:3000/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -50,12 +22,25 @@ document.getElementById('regForm').addEventListener('submit', async function(e) 
         const result = await sendAndResponse.json();
         message.textContent =result;
 
-    } catch (error) {
+        if(clearone){
+          clearTimeout(clearone);
+        }
+
+         if (sendAndResponse.ok) {
+      
+          clearone = setTimeout(() => {
+          document.getElementById('regForm').reset();
+        }, 3000);
+      }
+
+    } 
+    catch (error) {
         message.textContent = 'An error occurred.';
         console.error(error);
     }
+
+    
 });
  
-
 
 
