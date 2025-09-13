@@ -1,1 +1,1 @@
-# The project files is all about frontend and backend of a registration form where users will register and log in using their details 
+# NewGen technologies present to you a creative learning platform , a web app where user can come to self-develop their self on well rich conceptual materials in both pdf and video format, also one on one onlin and physical training are available for user who will rgister for any of our training courses '
