@@ -1,0 +1,91 @@
+.btn{
+    background: none; padding: 1em; width: clamp(7em, 12vw, 12em); height: 4em; border-radius: 1em;
+  box-shadow: 3px 3px 6px green; border: none; 
+}
+
+/* 
+1️⃣ Payment & Webhook Flow
+User clicks Buy Now → Paystack inline payment is triggered from frontend.
+
+Paystack webhook calls /api/payments/webhook on your backend after payment attempt.
+
+Backend:
+
+Verifies webhook signature.
+
+Confirms transaction status with Paystack API (double check, never trust raw webhook blindly).
+
+If successful:
+
+Find the material in Material collection by its _id (✅ safer & unique than title or name).
+
+Add that material’s _id to the user’s purchasedMaterials array in the User collection.
+
+Optionally store payment log in a Transaction collection (for refunds, disputes, audit trail).
+
+2️⃣ Serving Purchased Materials
+When the user visits /profile:
+
+The user/profileroute calls MongoDB:
+
+Find the user by token.
+
+Populate purchasedMaterials with details from the Material model (title, type, protected streaming URL).
+
+Return JSON to frontend.
+
+Frontend renders them for streaming only.
+
+3️⃣ Security & Anti-Download Measures
+Here’s what’s realistically possible (note: screen recording can’t be fully blocked in browsers, but we can make it inconvenient):
+
+Video:
+
+Serve via an HLS stream (.m3u8) instead of MP4.
+→ This breaks most "Save video as…" options.
+
+
+Disable right-click/context menu on video element.
+
+Hide the <video src> direct URL by streaming through a protected backend route.
+
+For added DRM, integrate with services like Vimeo OTT, AWS MediaConvert, or Widevine (but this is more advanced and often paid).
+
+PDF:
+
+Use PDF.js to render in a <canvas> inside the browser.
+
+Disable right-click and text selection.
+
+Never give a raw .pdf download link.
+
+4️⃣ Offline Streaming with Service Worker
+We can:
+
+Cache encrypted chunks (HLS .ts files or PDF page canvases) via Service Worker.
+
+Decrypt on-the-fly in browser for playback, so cached files aren’t useful if copied.
+
+Restrict service worker caching to authenticated sessions. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+  <!-- Admin Signup Form -->
+  <div class="logo"></div>
+  <div class="reg-wrapper signup-form">
+    <form id="admin-signup">
+      <h2 class="register sign">Signup</h2>
+      <label>Username</label>
+      <input type="text" name="username" pattern="^[a-zA-Z0-9_]{3,16}$" required autocomplete="username" /><br>
+
+      <label>Password</label>
+      <input 
+        type="password" name="password" 
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required 
+        autocomplete="new-password"
+      />
+
+      <div class="regMessage"></div>
+      
+
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+
+  <!-- Admin Login Form -->
+  <div class="reg-wrapper login-form" > 
+    <form id="admin-login">
+      <h2 class="register sign">Login</h2>
+      <label>Username</label>
+      <input type="text" name="username" required autocomplete="username" /><br>
+
+      <label>Password</label>
+     <!-- ✅ CORRECT HTML version: use single backslash in pattern -->
+      <input 
+        type="password" name="password" 
+        required autocomplete="current-password"/>
+
+      <label>Login Code</label>
+      <input type="text" name="code" pattern="\d{6}" required title="6-digit login code" />
+
+      <div class="loginMessage"></div>
+
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+
+  <script src="Admin.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <!-- admin signup form 
+    <div class="logo"></div>
+    <div class="reg-wrapper">
+        <form id="admin-signup">
+            <h2 class="register sign">Signup</h2>
+            <label>Username</label>
+           
+            <input type="text" name="username" pattern="^[a-zA-Z0-9_]{3,16}$" autocomplete="username" required /><br>
+
+            <span>
+                <label>Password</label>
+                <input 
+                title="Password must be at least 8 characters, including 1 uppercase, 1 lowercase, 1 number, and 1 special character."
+                type="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" autocomplete="new-password" required 
+                />               
+            </span>
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+
+<!-- login 
+    <div class="reg-wrapper hide">
+        <form id="admin-login">
+            <h2 class="register sign">Login</h2>
+            <label>Username</label>
+           
+            <input type="text" name="username" pattern="^[a-zA-Z0-9_]{3,16}$" autocomplete="username" required /><br>
+
+            <span>
+                <label>Password</label>
+                <input type="password" name="password"  autocomplete="new-password" required />               
+            </span>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+
+    
+    <script src="Admin.js"></script>
+    
+</body>
+</html>
+ -->

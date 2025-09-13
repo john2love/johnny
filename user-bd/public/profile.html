@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile.css" /> 
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="profile-wrapper">
+
+    <!-- ===== User Info Tab ===== -->
+    <section id="tab-my-info" class="tab-content active">
+      <div class="user-info">
+        <div class="profile-pic">66</div>
+        <div class="user-details">
+          <h2 id="username">...</h2>
+          <p id="email">...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Available Materials Tab ===== -->
+    <section id="tab-available" class="tab-content">
+      <h3>Available Materials</h3>
+
+      <!-- Sub-tabs -->
+      <div class="sub-tabs">
+        <button class="sub-tab-btn active" data-sub="videos" onclick="globalThis.location.href = 'index.html'">Videos</button>
+
+        <button class="sub-tab-btn" data-sub="pdfs" onclick="globalThis.location.href = 'index.html'">PDFs</button>
+      </div>
+
+      <!-- Videos list -->
+      <div id="available-videos" class="sub-tab-content active">
+        <div class="videos-grid" id="availableVideosGrid">
+          <!-- Filled dynamically from /api/materials -->
+        </div>
+      </div>
+
+      <!-- PDFs list -->
+      <div id="available-pdfs" class="sub-tab-content">
+        <div class="pdf-grid" id="availablePDFsGrid">
+          <!-- Filled dynamically from /api/materials -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Purchased Materials Tab ===== -->
+    <section id="tab-purchased" class="tab-content">
+      <h3>My Purchased Materials</h3>
+      <div class="purchased-grid" id="purchasedMaterialsGrid">
+        <!-- Filled dynamically from /api/user/materials -->
+      </div>
+    </section>
+
+    <!-- ===== Offline Access Tab ===== -->
+    <section id="tab-offline" class="tab-content">
+      <h3>Offline Access</h3>
+      <p>Coming soon...</p>
+    </section>
+
+    <!-- ===== Footer Navigation ===== -->
+    <footer class="footer-nav">
+      <div class="footer-item" data-tab="my-info">
+        <i class="ri-user-line icon"></i>
+        <span>My Info</span>
+      </div>
+      <div class="footer-item" data-tab="available">
+        <i class="ri-folder-video-line icon"></i>
+        <span>Available</span>
+      </div>
+      <div class="footer-item" data-tab="purchased">
+        <i class="ri-shopping-bag-line icon"></i>
+        <span>Purchased</span>
+      </div>
+      <div class="footer-item" data-tab="offline">
+        <i class="ri-download-line icon"></i>
+        <span>Offline</span>
+      </div>
+    </footer>
+
+    <!-- ===== Logout Button ===== -->
+    <div class="logout">
+      <button class="btn" onclick="window.location.href='login.html'">Logout</button>
+    </div>
+
+  </div>
+
+  <script src="profile.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile.css" /> 
+</head>
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+         <symbol id="html" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 16 4-4-4-4" />
+            <path d="m6 8-4 4 4 4" />
+            <path d="m14.5 4-5 16" />
+         </symbol>
+    </svg>
+
+
+  <div class="profile-wrapper">
+
+    <!-- User Info 
+    <section class="user-info">
+      <div class="profile-pic"></div>
+
+      <div class="user-details">
+        <h2 id="username">...</h2>
+        <p id="email">...</p>
+      </div>
+
+      </section>
+
+    <!-- Purchased Videos --
+    <section class="materials-section">
+      <h3>Purchased Videos</h3>
+      <div class="videos-grid">
+        <div class="video-card">
+          <video src="sample-js.mp4" controls></video>
+          <p>JavaScript Crash Course</p>
+        </div>
+        <div class="video-card">
+          <video src="sample-html.mp4" controls></video>
+          <p>HTML Fundamentals</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Actions --
+    <footer class="footer-nav">
+      <div class="footer-item ">
+        <i class="ri-play-circle-line icon"></i>
+        <span>Video Materials</span>
+      </div>
+      <div class="footer-item">
+        <i class="ri-file-pdf-line icon"></i>
+        <span>PDF Materials</span>
+      </div>
+      <div class="footer-item">
+        <i class="ri-graduation-cap-line icon"></i>
+        <span>Enroll for Trainings</span>
+      </div>
+    </footer>
+   <div class="logout">
+      <button class="btn" onclick="window.location.href='login.html'">Logout</button>
+   </div>
+
+  </div>
+
+
+  <script src="profile.js"></script>
+  <script src="index.js"></script>
+</body>
+</html> -->

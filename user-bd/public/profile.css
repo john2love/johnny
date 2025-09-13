@@ -1,0 +1,252 @@
+/* profile.css */
+
+body {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  border: 2px solid blue;
+}
+
+.profile-wrapper {
+  width: 90%;
+  padding: 20px;
+}
+.profile-pic{
+  background-image: url('images/bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 8em; height: 5em;
+  border-radius: 20%;
+  border: 1px solid red;
+}
+
+/* Tabs */
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+/* Sub-tabs */
+.sub-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.sub-tab-btn {
+
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.sub-tab-btn.active {
+  background: #007bff;
+  color: white;
+}
+
+/* Video/PDF grids */
+.videos-grid, .pdf-grid, .purchased-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.video-card, .pdf-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.video-card video {
+  width: 100%;
+}
+
+/* Footer */
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background: white;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 95%;
+}
+.footer-item {
+  text-align: center;
+  cursor: pointer;
+}
+.footer-item .icon {
+  font-size: 1.5em;
+}
+.footer-item span {
+  display: block;
+  font-size: 0.8em;
+}
+
+/* Logout button */
+.logout {
+  margin-top: 20px;
+  text-align: center;
+}
+.logout .btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: clamp(1rem, 1.2vw + 0.2rem, 1.5rem);
+}
+
+body {
+    width: 100%; font-size: clamp(1rem, 1.2vw + 0.2rem, 1.5rem);
+    font-family: 'system UI', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+.profile-wrapper {
+    /* max-width: 800px; *
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    /* border: 1px solid red; *
+}
+
+/* User Info *
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  /* border: 1px solid; *
+}
+
+.profile-pic {
+    background-image: url('images/john.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ccc;
+}
+
+.user-details h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.user-details p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Materials *
+.materials-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.video-card {
+  background: #f0f0f5;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.video-card p {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Footer Navigation *
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  background: #fff;
+  padding: 1rem 0.5rem;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  bottom: 0;
+  border: 1px solid red;
+  border-radius: 12px;
+  box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.icon{ width: 3em; height: 3em;display: flex;  border-radius: 50%;
+  justify-content: center;align-items: center; background-color: rgb(13, 223, 13); color: white;
+}
+.icon:hover{
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+ 
+}
+
+.footer-item {
+  display: flex;  border: 1px solid blue;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: center;
+  
+}
+
+.footer-item:hover {
+  color: #37f112;
+}
+
+.footer-item i {
+  margin-bottom: 0.4rem;
+}
+.btn{
+  background: none; padding: 1em; width: clamp(7em, 12vw, 12em); height: 4em; border-radius: 1em;
+  box-shadow: 3px 3px 6px green; border: none; 
+}
+.logout{
+  border: 1px solid;
+}
+
+.btn:hover{
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+ */

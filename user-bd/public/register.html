@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="logo"></div>
+    <div id="reg-wrapper">
+        
+        <form id="regForm">
+            <h2 class="register">Signup</h2>
+            <label>Username</label>
+           
+            <input type="text" name="username" pattern="^[a-zA-Z0-9_]{3,16}$" autocomplete="username" required /><br>
+
+            <label>Email</label>
+            <input type="email" name="email" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{3,}$" autocomplete="email" required />
+            <br>
+
+            <span>
+                <label>Password</label>
+                <input 
+                title="Password must be at least 8 characters, including 1 uppercase, 1 lowercase, 1 number, and 1 special character."
+                type="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" autocomplete="new-password" required 
+                />
+                
+            </span>
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <output id="message"></output>
+
+    </div>
+    
+    <script src="register.js"></script>
+</body>
+</html>

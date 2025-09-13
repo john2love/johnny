@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+
+    <!-- Paystack Inline SDK -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <script>
+      // Put your Paystack public key here (test for dev, live for production)
+      window.PAYSTACK_PUBLIC_KEY = "pk_test_287263f614d3b6ec3d7c76979ebbd4b45644da15";
+    </script>
+</head>
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="html" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 16 4-4-4-4" />
+            <path d="m6 8-4 4 4 4" />
+            <path d="m14.5 4-5 16" />
+        </symbol>
+
+        <symbol id="star" viewBox="0 0 24 24">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+        </symbol>
+
+        <symbol id="bar" stroke="currentColor" viewBox="0 0 24 24" fill="currentColor">
+            <line x1="21" y1="10" x2="3" y2="10"/>
+            <line x1="21" y1="6" x2="3" y2="6"/>
+            <line x1="21" y1="14" x2="3" y2="14"/>
+            <line x1="21" y1="18" x2="3" y2="18"/>
+        </symbol>
+    </svg>
+
+    <div class="header">
+        <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Blog</li>
+        </ul>
+    </div>
+    <div id="logo-container"></div>
+
+    
+
+    <section class="first">
+        <div class="para">
+            <h1>NewGen Tech limited.</h1>
+            <h4>
+                You can rely on us for the following services:
+                <ol>
+                    <li>Tech skill </li>
+                    <li>conceptual non transferable video and pdf, word materials for self-training </li>
+                    <li>Excellent project delivery </li>
+                </ol>
+            </h4>
+        </div>
+
+        <a href="form.html">Java Script training!</a>
+
+        <div class="imageshow"></div>
+    </section>
+
+    <div class="text">
+        We live in a world full of problems as others will look at it, but actually  it is better said the world is full of oppotunities and 
+        positioning one-self for solution giving creat the oppotunity we  are talking about.Every sector of human development revolves around 
+        computer technology so to trive in this tech world you must aquire an I.T skill which is why NewGen tech was created, NewGen is here to 
+        help you aquire this skill well and deep.
+    </div>
+
+    <main class="main-host">
+
+        <h2 style="padding-left: 1em; text-align: left; border: 1px solid;font-weight: normal;">
+            <!-- pdf materials -->
+            At NewGen, we prepare for you a conceptual materials in videos and pdf format best for your choice of I.T career.
+        </h2>
+
+        <div class="main">
+
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">HTML Key concept</h4>
+                <input type="text" class="username" placeholder="Enter your username" required />
+                <p>$3</p>
+                <input type="email" class="email-input" placeholder="Enter your email" required />
+
+                <button
+                  class="action btn buy-button"
+                  data-id="68bb0c2b50f25d0aef130bc2"
+                  data-title=" css"
+                   data-price="300"
+                >Buy now</button>
+            </div>
+
+            <div class="cards">
+
+                <div class="icon"></div>
+                <h4 class="card-info">CSS made easy</h4>
+                <input type="text" class="username" placeholder="Enter your username" required />
+                <p>$5</p>
+                <input type="email" class="email-input" placeholder="Enter your email" required />
+
+                <button
+                  class="action btn buy-button"
+                  data-id="68bb04d649e853c70dab7ba4"
+                  data-title="CSS made easy"
+                   data-price="500"
+                >Buy now</button>
+            </div>
+
+            <div class="cards">
+
+                <div class="icon"></div>
+                <h4 class="card-info">Javascript made easy</h4>
+                <input type="text" class="username" placeholder="Enter your username" required />
+                <p>$8</p>
+                <input type="email" class="email-input" placeholder="Enter your email" required />
+
+                <button
+                  class="action btn buy-button"
+                  data-id="68bb034349e853c70dab7ba0"
+                  data-title="Javascript made easy"
+                   data-price="800"
+                >Buy now</button>
+            </div>
+        </div>
+
+        <!-- Scholarship -->
+        <h1 class="h1">Here is our scholarship for you.</h1>
+        <div class="flier">
+            <div class="scholarship"></div>
+            <div class="action-giff">
+                <p>What are you waiting for? Register for this training.</p>
+                <button class="btn but">Enroll</button>
+            </div>
+        </div>
+
+        <!-- courses -->
+        <h2 class="h1h4">Our Courses  are both physical and online</h2>
+
+        <div class="main main2">
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">Web Design</h4>
+                <p class="card-info">
+                    100% Practical training
+                    on web-design 
+                </p>
+                <button class="action btn">Read More</button>
+            </div>
+
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">Web Development</h4>
+                <p class="card-info">
+                    Begin your journey of
+                    becoming a web developer
+                </p>
+                <button class="action btn">Read More</button>
+            </div>
+
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">Mobile & Web App Dev</h4>
+                <p class="card-info">
+                    We walk you practiacal concept.
+                </p>
+                <button class="action btn align">Read More</button>
+            </div>
+        </div>
+
+        <!-- FOR TESTING PURPOSE -->
+        <div class="teaching steps">
+            <div class="iterm"> iphone</div>
+            <div class="iterm"> tv</div>
+            <div class="iterm"> charger</div>
+        </div>
+
+        <!-- google review -->
+        <div id="google-reviews" class="reviews-container">
+            <h2 class="h1h4">Hear testimonies from our clients your self.</h2>
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+        </div>
+
+        <!-- the video materials -->
+        <h2 class="h1h4">Our video resources</h2>
+        <div class="main main3">
+
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">HTML Key concept</h4>
+                <input type="text" class="username" placeholder="Enter your username" required />
+                <p>$3</p>
+                <input type="email" class="email-input" placeholder="Enter your email" required />
+
+                <button
+                  class="action btn buy-button"
+                  data-id="68b95167b1162266fe5e20bb"
+                  data-title="HTML Key concept (Video)"
+                   data-price="300"
+                >Buy now</button>
+            </div>
+
+            <div class="cards">
+
+                <div class="icon"></div>
+                <h4 class="card-info">CSS made easy</h4>
+                <input type="text" class="username" placeholder="Enter your username" required />
+                <p>$5</p>
+                <input type="email" class="email-input" placeholder="Enter your email" required />
+
+                <button
+                  class="action btn buy-button"
+                  data-id="689422bbccfde1ec62d4fcd9"
+                  data-title="intro to css"
+                   data-price="500"
+                >Buy now</button>
+            </div>
+
+            <div class="cards">
+
+                <div class="icon"></div>
+                <h4 class="card-info">Javascript made easy</h4>
+                <input type="text" class="username" placeholder="Enter your username" required />
+                <p>$8</p>
+                <input type="email" class="email-input" placeholder="Enter your email" required />
+
+             <button
+                class="action btn buy-button"
+                data-id="68bb03a749e853c70dab7ba2"
+                data-title="Javascript made easy (Video)"
+                data-price="800"
+                >
+                Buy now
+             </button>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="list">
+            <span>Build your website</span>
+            <span>corperate training</span>
+            <ul>
+                <li>Build your application</li>
+                <li>Learn a digital skill</li>
+                <li>work with us</li>
+                <li>partner with us</li>
+            </ul>
+        </div>
+        <div class="copyright">
+           <h1></h1>
+           <span>Check how we do it, love what we do.</span>
+           <h1></h1>
+        </div>
+        <div class="copy"><p>Copyright  @ 2025</p></div>
+    </footer>
+
+    <script src="index.js"></script>
+    <!-- Your init script -->
+    <script src="paystack.init.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+
+    <!-- Paystack Inline SDK --
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+    <!-- Expose ONLY your PUBLIC key (never the secret key) --
+    <script>
+    // Put your Paystack public key here (test for dev, live for production)
+    window.PAYSTACK_PUBLIC_KEY = "pk_test_287263f614d3b6ec3d7c76979ebbd4b45644da15"; 
+    </script>
+
+    
+
+
+    
+   
+</head>
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+         <symbol id="html" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 16 4-4-4-4" />
+            <path d="m6 8-4 4 4 4" />
+            <path d="m14.5 4-5 16" />
+         </symbol>
+
+
+        <symbol id="star" viewBox="0 0 24 24">
+          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+        </symbol>
+
+        <symbol id="bar" stroke="currentColor" viewBox="0 0 24 24" fill="currentColor">
+            <line x1="21" y1="10" x2="3" y2="10"/>
+            <line x1="21" y1="6" x2="3" y2="6"/>
+            <line x1="21" y1="14" x2="3" y2="14"/>
+            <line x1="21" y1="18" x2="3" y2="18"/>
+        </symbol>
+
+    </svg>
+
+    <div class="header">
+        <ul>
+            <li>Home</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Blog</li>
+    
+        </ul>
+    </div>
+    <div id="logo-container"></div>
+
+    <section class="first">
+
+        <div class="para">
+            <h1>NewGen Tech limited.</h1>
+            <h4>
+                You can rely on us for the following services:
+                <ol>
+                    <li>Tech skill </li>
+                    <li>conceptual non transferable video and pdf, word materials for self-training </li>
+                    <li>Excellent project delivery </li>
+                </ol>  
+            </h4>
+        </div>
+
+        <a href="form.html">Java Script training!</a>
+
+        <div class="imageshow"></div>
+       
+
+    </section>
+    <div class="text">
+        We live in a world full of problems as others will look at it, but actually  it is better said the world is full of oppotunities and 
+        positioning one-self for solution giving creat the oppotunity we  are talking about.Every sector of human development revolves around 
+        computer technology so to trive in this tech world you must aquire an I.T skill which is why NewGen tech was created, NewGen is here to 
+        help you aquire this skill well and deep.
+    </div>
+
+    <main class="main-host">
+
+        <h2 style="padding-left: 1em; text-align: left; border: 1px solid;font-weight: normal;  ">
+            <!-- pdf materials --
+            At NewGen, we prepare for you a conceptual materials in videos and pdf format best for your choice of I.T career.
+        </h2>
+        <div class="main">
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">HTML Key concept</h4>      
+               <p class="card-info">Course material </p>
+                <p>$3</p>
+                <button class="action btn">Read More</button>
+            </div>
+
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">CSS made easy</h4>
+                <p class="card-info">Course material</p>
+                <p>$5</p>
+                <button class="action btn">Read More</button>
+            </div>
+
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">Javascript made easy</h4>
+                <p class="card-info">Course material</p>
+                <p>$8</p>
+                <button class="action btn">Read More</button>
+            </div>
+        </div>
+        <!-- Scholarship --
+         <h1 class="h1">Here is our scholarship for you.</h1>
+         <div class="flier">
+            <div class="scholarship"></div>
+            <div class="action-giff">
+                <p>What are you waiting for? Register for this training.</p>
+                <button class="btn but">Enroll</button>
+            </div>
+         </div>
+        <!-- courses --
+         <h2 class="h1h4">Our Courses  are both physical and online</h2>
+
+        <div class="main main2" >
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">Web Design</h4>
+                <p class="card-info">
+                    100% Practical training
+                    on web-design 
+                </p>
+                <button class="action btn">Read More</button>
+            </div>
+
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">Web Development</h4>
+                <p class="card-info">
+                    Begin your journey of
+                    becoming a web developer
+                </p>
+                
+                <button class="action btn">Read More</button>
+            </div>
+
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">Mobile & Web App Dev</h4>
+                <p class="card-info">
+                    We walk you practiacal concept.
+                    
+                </p>
+                <button class="action btn align">Read More</button>
+            </div>
+        </div>
+        <!-- FOR TESTING PURPOSE --
+        <div class="teaching steps">
+            <div class="iterm"> iphone</div>
+            <div class="iterm"> tv</div>
+            <div class="iterm"> charger</div>
+        </div>
+
+        <!-- google review --
+         <div id="google-reviews" class="reviews-container">
+            <h2 class="h1h4">Hear testimonies from our clients your self.</h2>
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+         <div id="google-reviews" class="reviews-container">
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+
+            <div class="review">
+                <div class="review-author"></div>
+                <div class="review-rating"></div>
+                <div class="review-text"></div>
+            </div>
+        </div>
+        
+        <!-- the video materials --
+         <h2 class="h1h4">Our video resources</h2>
+        <div class="main main3">
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">HTML Key concept</h4>
+                <p class="card-info">Course material</p>
+                <p>$3</p>
+                <button class="action btn">Read More</button>
+            </div>
+
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">CSS made easy</h4>
+                <p class="card-info">Course material</p>
+                <p>$5</p>
+                <button class="action btn">Read More</button>
+            </div>
+
+            <div class="cards">
+                <div class="icon"></div>
+                <h4 class="card-info">Javascript made easy</h4>
+                <p class="card-info">Course material</p>
+                <p>$8</p>
+                <button class="action btn">Read More</button>
+            </div>
+        </div>
+                
+    </main>
+    
+   <footer>
+        <div class="list">
+            <span>Build your website</span>
+            <span>corperate training</span>
+            <ul >          
+                <li>Build your application</li>
+                <li>Learn a digital skill</li>
+                <li>work with us</li>
+                <li>partner with us</li>          
+            </ul>
+        </div>
+        <div class="copyright">         
+           <h1></h1>
+           <span>Check how we do it, love what we do.</span>
+           <h1></h1> 
+        </div>
+        <div class="copy"><p>Copyright  @ 2025</p></div>           
+   </footer>
+    <!-- <div class="btn-conta"><button id="clickin">Signup</button></div> --
+    
+    
+    
+    <script src="index.js"></script>
+    <!-- Your init script (see file below) --
+    <script src="/js/paystack.init.js"></script>
+</body>
+</html>
+
+
+
+
+ -->

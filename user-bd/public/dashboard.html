@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminupload dashboard</title>
+    <link rel="stylesheet" href="admindashboard.css">
+</head>
+<body>
+    <h2>Upload New Material</h2>
+    <!-- ✅ enctype ensures file upload works -->
+    <form id="uploadForm" enctype="multipart/form-data">
+        <!-- ✅ name="title" matches backend field -->
+        <input type="text" name="title" id="title" placeholder="Material Title" required />
+        
+        <!-- ✅ name="file" matches multer.single('file') -->
+        <input type="file" name="file" id="fileInput" accept=".pdf,.mp4,video/mp4" required />
+        
+        <button type="submit" class="btn">Upload</button>
+    </form>
+
+    <div id="status"></div>
+
+    <div class="logout">
+        <button type="button" class="btn" onclick="window.location.href='adminSignLogin.html'">Logout</button>
+    </div>
+
+    <script src="adminUpload.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adminupload dashboard</title>
+    <link rel="stylesheet" href="admindashboard.css">
+</head>
+<body>
+     <h2>Upload New Material</h2>
+    <!-- ✅ Added enctype to be explicit (safe even though JS handles FormData) --
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="text" name="title" id="title" placeholder="Material Title" required />
+        <!-- ✅ Broadened accept to include .mp4 extension as well --
+        <input type="file" name="file" id="fileInput" accept=".pdf,.mp4,video/mp4" required />
+        <button type="submit" class="btn">Upload</button>
+    </form>
+
+    <div id="status"></div>
+
+    <div class="logout">
+      <button type="submit" class="btn" onclick="window.location.href='adminSignLogin.html'">Logout</button>
+   </div>
+
+   <script src="adminUpload.js"></script>
+</body>
+</html>
+
+
+
+
+ -->

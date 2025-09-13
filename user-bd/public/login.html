@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="logo"></div>
+  <div id="login-wrapper">
+    <form id="loginForm">
+      <h2 class="login">Login</h2>
+
+      <label>Username</label>
+      <input type="text" name="username" pattern="^[a-zA-Z0-9_]{3,16}$" autocomplete="username" required /><br>
+
+      <label>Password</label>
+
+      <input type="password" name="password" autocomplete="current-password"
+      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required />
+      <br>
+
+      <button type="submit" class="btn">Login</button>
+    </form>
+    <output id="loginMessage"></output>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
+
+
+
+<!-- 1.a. what async function and in what file failed after multer? 
+What error do you think it swallow can you provide an error function to trace what is the error? 
+b. you said No ➡️ /api/materials/upload called? this is from 
+frontend js right? why was it called in the first upload and wasn't called in the second upload? -->
