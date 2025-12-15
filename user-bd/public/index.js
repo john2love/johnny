@@ -61,29 +61,6 @@ const mockReviews = [
 ];
  
 
-
-
-//DOM ACCESSMENT IN J.S
-
-// 1. To select an element from html file into a j.s environment you use a built-in method that is particular to 
-
-// document object, these are a. getElementById()this is strictly for element with id. b. querySelector()this select element with either id or class, 
-
-// but with a specification of ("." for class and # for id ) e.g, document.getElementById("iterm"); if iterm is an id or document.querySelector('.iterm') 
-
-// you can store the selected element in a variable e.g const list = document.querySelector('.iterm') .
-
-// NODELIST: This is a list or group of html elements selected from html file by a document's method called
-// querySelector() or getElementById() into a j.s environment.
-
-// so the line "const list = document.querySelectorAll('.iterm');" Select all .iterm elements for html file and store it in a nodelist( list)
-
-// 2. A METHOD: This is a function which is specific to an object, e.g, log is specific to console object
-//(console.log()) etc, so in the code block below, the forEach method is is a built-in method particular to the object "list"
-
-// there is an arrow function inside the method it has two parameters, element and i, both the function and method work together so that when the forEach method go through (looping)
-// the nodelist list one after another it gives out the two parameters, element(review block) and it's index number (i) if you look we console the element and index in the below.
-// in the browser sonsole the result will be iterm: iphon, index: 0, iterm: tv, index: 1, iterm: charger, index: 2,
 const list = document.querySelectorAll('.iterm');
   list.forEach((element, i)=>{
     console.log(list);
@@ -124,6 +101,20 @@ reviewElements.forEach((el, i) => {
   textEl.textContent = data.text;
 });
 
+(() => {
+  const token = localStorage.getItem('token');
+  const btn = document.getElementById('profileNav');
+
+  if (!btn) return;
+
+  if (token) btn.style.display = 'block';
+
+  btn.onclick = () => {
+    window.location.href = 'profile.html';
+  };
+})();
+
+
 
 
 // Jave script statements
@@ -137,10 +128,13 @@ reviewElements.forEach((el, i) => {
     }
     else {console.log('Is either a Good or excellence result');}
 
-// if elsle if else statement: this check multiple conditions, skips to the next condition if the 
-// current one is fals, and stops after executing the first true condition, ones the first true condition is met
-// if none of the condition is true j.s executes else block if present
-// NOTE: the purpose of this statement is to find out the desired option out of many options
+/*
+ if elsle if else statement: this check multiple conditions, skips to the next condition if the 
+ current one is fals, and stops after executing the first true condition, ones the first true condition is met
+if none of the condition is true j.s executes else block if present
+NOTE: the purpose of this statement is to find out the desired option out of many options
+*/
+
 if(score < 49 ){
         console.log('you tried but you did not meet up the pass mark');
     }
@@ -150,11 +144,39 @@ if(score < 49 ){
     else if(score > 60){console.log('congratulations, you have over qualified!');}
  
     else {console.log('Is either a Good or excellence resuld');}
-    // in the above conditions the j.s will skip the first one because it's not true, when it 
-    // gets to the second one, it will execute it and stop because it is true, but in a case where 
-    // the last is else is true, it will skip the second condition to execute the last one, also if 
-    // none of the else if inclution of the only if statements is true, it will skip all to the else statement.
 
+      /*
+     in the above conditions the j.s will skip the first one because it's not true, when it 
+    gets to the second one, it will execute it and stop because it is true, but in a case where 
+     the last is else is true, it will skip the second condition to execute the last one, also if 
+    none of the else if inclution of the only if statements is true, it will skip all to the else statement.
+    */
+
+
+    /*
+    //DOM ACCESSMENT IN J.S
+
+ 1. To select an element from html file into a j.s environment you use a built-in method that is particular to 
+
+ document object, these are a. getElementById()this is strictly for element with id. b. querySelector()this select element with either id or class, 
+
+ but with a specification of ("." for class and # for id ) e.g, document.getElementById("iterm"); if iterm is an id or document.querySelector('.iterm') 
+
+ you can store the selected element in a variable e.g const list = document.querySelector('.iterm') .
+
+ NODELIST: This is a list or group of html elements selected from html file by a document's method called
+ querySelector() or getElementById() into a j.s environment.
+
+ so the line "const list = document.querySelectorAll('.iterm');" Select all .iterm elements for html file and store it in a nodelist( list)
+
+ 2. A METHOD: This is a function which is specific to an object, e.g, log is specific to console object
+(console.log()) etc, so in the code block below, the forEach method is is a built-in method particular to the object "list"
+
+ there is an arrow function inside the method it has two parameters, element and i, both the function and method work together so that when the forEach method go through (looping)
+ the nodelist list one after another it gives out the two parameters, element(review block) and it's index number (i) if you look we console the element and index in the below.
+ in the browser sonsole the result will be iterm: iphon, index: 0, iterm: tv, index: 1, iterm: charger, index: 2,
+
+*/
   
     
   

@@ -6,6 +6,8 @@
   <title>User Profile</title>
   <link rel="stylesheet" href="profile.css" /> 
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
 </head>
 <body>
 
@@ -13,12 +15,15 @@
 
     <!-- ===== User Info Tab ===== -->
     <section id="tab-my-info" class="tab-content active">
+
       <div class="user-info">
         <div class="profile-pic">66</div>
+
         <div class="user-details">
           <h2 id="username">...</h2>
           <p id="email">...</p>
         </div>
+
       </div>
     </section>
 
@@ -35,9 +40,11 @@
 
       <!-- Videos list -->
       <div id="available-videos" class="sub-tab-content active">
+
         <div class="videos-grid" id="availableVideosGrid">
           <!-- Filled dynamically from /api/materials -->
         </div>
+        
       </div>
 
       <!-- PDFs list -->
@@ -91,6 +98,8 @@
 
   <script src="profile.js"></script>
   <script src="index.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.0/dist/hls.min.js"></script> -->
+
 </body>
 </html>
 
@@ -139,7 +148,7 @@
 
   <div class="profile-wrapper">
 
-    <!-- User Info 
+     User Info 
     <section class="user-info">
       <div class="profile-pic"></div>
 
@@ -150,7 +159,7 @@
 
       </section>
 
-    <!-- Purchased Videos --
+     Purchased Videos --
     <section class="materials-section">
       <h3>Purchased Videos</h3>
       <div class="videos-grid">
@@ -165,7 +174,7 @@
       </div>
     </section>
 
-    <!-- Footer Actions --
+    Footer Actions --
     <footer class="footer-nav">
       <div class="footer-item ">
         <i class="ri-play-circle-line icon"></i>
