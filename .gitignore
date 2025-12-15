@@ -1,0 +1,6 @@
+# Ignore uploads and generated media
+user-bd/uploads/
+
+# Optional: ignore OS junk
+node_modules/
+.DS_Store
