@@ -1,3 +1,73 @@
+const express = require('express');
+const { authenticateToken } = require('../middleware/authMiddleware');
+const User = require('../models/User');
+const Material = require('../models/Material');
+
+require('dotenv').config();
+
+const router = express.Router();
+const PAYSTACK_SECRET_KEY = process.env.PAYSTACK_SECRET_KEY;
+
+async function initiatePaymentHandler(req, res) {
+  try {
+    const { materialId } = req.body;
+    if (!materialId) {
+      return res.status(400).json({ message: 'Material ID is required.' });
+    }
+
+    const material = await Material.findById(materialId);
+    if (!material) return res.status(404).json({ message: 'Material not found.' });
+
+    const user = await User.findById(req.user.userId);
+    if (!user) return res.status(404).json({ message: 'User not found.' });
+
+    const bodyData = {
+      email: user.email,
+      amount: material.price * 100,
+      metadata: {
+        materialId: material._id.toString(),
+        username: user.username
+      },
+      callback_url: 'http://localhost:3000/profile.html?payment=success'
+    };
+
+    const response = await fetch('https://api.paystack.co/transaction/initialize', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${PAYSTACK_SECRET_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(bodyData)
+    });
+
+    const data = await response.json();
+
+    if (!data?.status) {
+      return res.status(500).json({ message: 'Payment initialization failed.' });
+    }
+
+    return res.json({ authorization_url: data.data.authorization_url });
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server error' });
+  }
+}
+
+router.post('/initiate', authenticateToken, initiatePaymentHandler);
+router.post('/initiate-payment', authenticateToken, initiatePaymentHandler);
+
+module.exports = router;
+
+
+
+
+
+
+
+
+
+/*
 // routes/paystackRoute.js
 const express = require('express');
 const { authenticateToken } = require('../middleware/authMiddleware');
@@ -78,3 +148,4 @@ router.post('/initiate', authenticateToken, initiatePaymentHandler);
 router.post('/initiate-payment', authenticateToken, initiatePaymentHandler);
 
 module.exports = router;
+*/
