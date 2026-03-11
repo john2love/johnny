@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messages | NewGen</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/colors.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <header id="navbar"></header>
+
+  <main id="app" class="messaging-page">
+
+    <section class="messages-hero">
+      <h1>Messages</h1>
+      <input type="text" id="search-user" placeholder="Search users..." />
+    </section>
+
+    <section class="messages-grid" id="messages-grid">
+      <!-- Message cards injected here -->
+    </section>
+
+    <section class="message-input">
+      <input type="text" id="new-message" placeholder="Type a message..." />
+      <button class="btn btn-primary" id="send-message">Send</button>
+    </section>
+
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script src="../js/auth.js"></script>
+  <script  src="../js/navbar.js"></script>
+  <script  src="../js/footer.js"></script>
+  <script  src="../js/messageCard.js"></script>
+  <script  src="../js/messaging.js"></script>
+</body>
+</html>

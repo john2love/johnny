@@ -1,0 +1,333 @@
+/* =====================================================
+   COLORS & VARIABLES
+===================================================== */
+:root {
+  --color-primary: #4f46e5;   /* deep tech blue */
+  --color-secondary: #10b981; /* green accent */
+  --color-muted: #f3f4f6;     /* light gray backgrounds */
+  --text-primary: #111827;    /* main text */
+  --text-secondary: #6b7280;  /* secondary text */
+  --border-light: #e5e7eb;    /* card borders */
+  --bg-white: #ffffff;
+  --bg-main: #f8f9fa;
+}
+
+/* =====================================================
+   BASE & RESET
+===================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-primary);
+  padding: 1rem 2rem;
+  color: var(--bg-white);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--bg-white);
+  font-weight: 500;
+}
+
+.nav-actions a.btn-primary {
+  background: var(--bg-white);
+  color: var(--color-primary);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--bg-white);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* =====================================================
+   PROFILE WRAPPER & USER INFO
+===================================================== */
+.profile-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--bg-white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  min-height: 100vh;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  background-size: cover;
+  background-position: center;
+}
+
+.user-details h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.user-details p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* =====================================================
+   TABS
+===================================================== */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.sub-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.sub-tab-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-white);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sub-tab-btn.active {
+  background: var(--color-primary);
+  color: var(--bg-white);
+}
+
+/* =====================================================
+   GRIDS
+===================================================== */
+.videos-grid,
+.pdf-grid,
+.purchased-grid,
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.video-card,
+.pdf-card,
+.material-card,
+.course-card,
+.admin-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.video-card video {
+  width: 100%;
+}
+
+.material-card .card-icon {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.material-instructor {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.material-description {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.course-level {
+  background: var(--color-muted);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* =====================================================
+   FOOTER NAVIGATION
+===================================================== */
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0;
+  background: var(--bg-white);
+  border-top: 1px solid var(--border-light);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 100;
+}
+
+.footer-item {
+  text-align: center;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.footer-item .icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* =====================================================
+   LOGOUT BUTTON
+===================================================== */
+.logout {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.logout button {
+  background: var(--color-primary);
+  color: var(--bg-white);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+/* =====================================================
+   RESPONSIVE FIXES
+===================================================== */
+@media (max-width: 1024px) {
+  .profile-wrapper {
+    padding: 1rem;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .videos-grid,
+  .pdf-grid,
+  .purchased-grid,
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .footer-item {
+    font-size: 0.7rem;
+  }
+
+  .footer-item .icon {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-filters {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+}

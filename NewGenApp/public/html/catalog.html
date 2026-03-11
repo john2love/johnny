@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+      <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+      <link rel="stylesheet" href="../css/colors.css" />
+      <link rel="stylesheet" href="../css/layout.css" />
+      <link rel="stylesheet" href="../css/components.css" />
+</head>
+<body>
+
+     <header id="navbar"></header>
+
+    <main id="app" class="catalog-page">
+
+        <!-- Search & Filters -->
+        <section class="search-filters">
+            <input type="text" id="search-input" placeholder="Search courses..." />
+            <select id="category-filter">
+            <option value="">All Categories</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="fullstack">Fullstack</option>
+            </select>
+        </section>
+
+        <!-- Course Grid -->
+        <section class="course-catalog">
+            <div id="course-grid" class="course-grid">
+            <!-- Course cards injected here -->
+            </div>
+        </section>
+    </main>
+    <footer id="footer"></footer>
+      <script src="../js/auth.js"></script>
+    <script src="../js/enrollmentStore.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/courseCard.js"></script>
+    <script src="../js/catalog.js"></script>
+    
+</body>
+    
+</body>
+</html>
+
+

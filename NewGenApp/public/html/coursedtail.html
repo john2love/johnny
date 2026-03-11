@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Detail | NewGen</title>
+
+  <!-- Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/colors.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+
+  <!-- Paystack Inline SDK -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script>
+    window.PAYSTACK_PUBLIC_KEY = "pk_test_287263f614d3b6ec3d7c76979ebbd4b45644da15";
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header id="navbar"></header>
+
+  <!-- Main Content -->
+  <main id="app" class="course-detail-page">
+
+    <!-- Course Header -->
+    <section class="course-header">
+      <h1 id="course-title">Loading...</h1>
+      <p id="course-description">Please wait...</p>
+    </section>
+
+    <!-- Course Meta -->
+    <section class="course-meta">
+      <div>
+        <span class="meta-label">Instructor</span>
+        <span id="course-instructor">-</span>
+      </div>
+      <div>
+        <span class="meta-label">Level</span>
+        <span id="course-level">-</span>
+      </div>
+    </section>
+
+    <!-- Enroll CTA -->
+    <section class="course-cta">
+      <button id="enroll-btn" class="btn btn-primary">Enroll Now</button>
+    </section>
+
+    <!-- Course Content Preview -->
+    <section class="course-content">
+      <h2>What you’ll learn</h2>
+      <ul id="course-topics">
+        <!-- Topics injected dynamically from JS -->
+      </ul>
+    </section>
+
+    <!-- Related Resources -->
+    <section class="related-resources">
+      <h2>Related Materials</h2>
+      <div id="related-resources-grid" class="cards-grid">
+        <!-- Material cards injected dynamically from JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer"></footer>
+
+  <!-- Scripts -->
+  <script src="../js/auth.js"></script>
+  <script src="../js/navbar.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/materialCard.js"></script>
+  <script src="../js/courseDetail.js"></script>
+  <script src="../js/paystack.init.js"></script>
+
+</body>
+</html>
