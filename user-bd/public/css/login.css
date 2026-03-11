@@ -1,4 +1,12 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
+/* ===========================
+   Reset & Body
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
@@ -7,40 +15,79 @@ body {
   overflow-x: hidden;
 }
 
-.login{color: var(--color-primary);}
-/* @keyframes spin {
-    0% {transform: rotateY(0deg) scale(1.2);}
-    100% {transform: rotateY(360deg);} 
-} */
-#login-wrapper{
-    box-shadow: 1px 3px 6px var(--color-primary);
-    display: flex; 
-    flex-direction: column; 
-    gap: 4em; width: 50%; 
-    height: fit-content; 
-    margin: 5rem auto ;
-    padding: 1em; 
+/* ===========================
+   Headings
+=========================== */
+.login {
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1em;
 }
 
-#loginForm{ 
-    display: flex; flex-direction: column;
-    
+/* ===========================
+   Login Wrapper
+=========================== */
+#login-wrapper {
+  box-shadow: 1px 3px 6px var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: clamp(300px, 50%, 600px);
+  margin: 5rem auto;
+  padding: 2em;
+  border-radius: 1em;
+  background: #fff;
 }
-input{
-     outline: none; padding:1em; border-radius: 5px;
 
-    }
+/* ===========================
+   Form
+=========================== */
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
-.btn{
-  background: none; padding: 1em; width: clamp(7em, 12vw, 12em); 
-  height: 4em; border-radius: 1em; background: var(--color-primary);
-  box-shadow: 2px 3px 2px black; border: none; color: #fff;
+label {
+  font-weight: bold;
 }
-.btn:hover{
-  transform: scale(1.2);
-  transition: transform 0.2s ease;
+
+input {
+  outline: none;
+  padding: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
 }
-/* ===== FIX NAVBAR VISIBILITY ON LOGIN PAGE ===== */
+
+/* ===========================
+   Button
+=========================== */
+.btn {
+  background: var(--color-primary);
+  padding: 1em;
+  width: clamp(7em, 12vw, 12em);
+  height: 4em;
+  border-radius: 1em;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+  border: none;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ===========================
+   Navbar fix for login page
+=========================== */
 header#navbar {
   width: 100%;
 }

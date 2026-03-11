@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   /* ==========================
      AUTH GUARD (SOURCE OF TRUTH)
      ========================== */
-  const authState = await window.getAuthState();
+  const authState = await window.getAuthState(true); // force refresh
   const { isAuth, role, user, token } = authState || {};
 
   if (!isAuth) {
@@ -41,28 +41,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   /* ==========================
-     FETCH MATERIALS (NO ASSUMPTIONS)
+     FETCH MATERIALS
      ========================== */
   async function fetchMaterials() {
     try {
-      const res = await fetch(`${window.API_BASE_URL}/api/materials`, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
+      const res = await fetch(`${window.API_BASE_URL || ""}/api/materials`, {
+        headers: { Authorization: `Bearer ${token}` }
       });
 
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status}`);
-      }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
       const data = await res.json();
-
-      if (!Array.isArray(data.materials)) {
-        console.warn("⚠️ Unexpected materials response shape:", data);
-        return [];
-      }
-
-      return data.materials;
+      return Array.isArray(data.materials) ? data.materials : [];
     } catch (err) {
       console.error("❌ Failed to fetch materials:", err.message);
       return [];
@@ -74,11 +64,7 @@ document.addEventListener("DOMContentLoaded", async () => {
      ========================== */
   function renderLibrary(materials) {
     if (!Array.isArray(materials) || materials.length === 0) {
-      grid.innerHTML = `
-        <p class="no-materials">
-          No materials available at the moment.
-        </p>
-      `;
+      grid.innerHTML = `<p class="no-materials">No materials available at the moment.</p>`;
       return;
     }
 
@@ -88,7 +74,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   /* ==========================
-     SEARCH (PURE FRONTEND)
+     SEARCH (FRONTEND ONLY)
      ========================== */
   function setupSearch(materials) {
     if (!searchInput) return;
@@ -114,7 +100,6 @@ document.addEventListener("DOMContentLoaded", async () => {
      INIT
      ========================== */
   const materials = await fetchMaterials();
-
   renderLibrary(materials);
   setupSearch(materials);
 });

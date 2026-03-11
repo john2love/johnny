@@ -1,21 +1,13 @@
+// adminGuard.js
 (async () => {
   if (window.__adminGuardRan) return;
   window.__adminGuardRan = true;
 
-  const { isAuth, role } = await window.getAuthState();
-
-  if (!isAuth) {
-    window.location.href = 'adminSignLogin.html';
-    return;
-  }
-
-  if (role !== 'admin') {
-    window.location.href = 'index.html';
-    return;
-  }
-
-  // ✅ Access granted
+  const auth = await window.getAuthState();
+  if (!auth.isAuth) return window.location.href = 'adminSignLogin.html';
+  if (auth.role !== 'admin') return window.location.href = 'index.html';
 })();
+
 
 
 
